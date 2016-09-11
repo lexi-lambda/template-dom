@@ -10,12 +10,27 @@ $ npm install template-dom
 
 ## Quick Start
 
+### With `virtual-dom`
+
 ```js
 import templateDom from 'template-dom';
 import h from 'virtual-dom/h';
 
 const D = templateDom(h);
+```
 
+### With `react`
+
+```js
+import templateDom from 'template-dom';
+import { createElement } from 'react';
+
+const D = templateDom(createElement);
+```
+
+### Creating an element
+
+```js
 const page =
   D.div `
     ${D.h1 `Hello, world!`}
